@@ -138,8 +138,7 @@ class PaymentIntegrationTest {
 						);
 		
 		
-		assertThat(listPayments).isNotNull();
-		assertThat(listPayments).hasSize(2);
+		assertThat(listPayments).isNotNull().hasSize(2);
 		assertThat(listPayments.get(0).getPayerId()).isEqualTo(savedPayment1.getPayerId());
 		assertThat(listPayments.get(1).getPayerId()).isEqualTo(savedPayment2.getPayerId());
 		

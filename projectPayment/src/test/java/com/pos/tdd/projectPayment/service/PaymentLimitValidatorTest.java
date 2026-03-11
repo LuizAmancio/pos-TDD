@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import com.pos.tdd.projectPayment.exceptions.PaymentLimitException;
 import com.pos.tdd.projectPayment.validator.PaymentLimitValidator;
 
-public class PaymentLimitValidatorTest {
+class PaymentLimitValidatorTest {
 	
 	 private static final BigDecimal MAX_LIMIT = new BigDecimal("2000.00");
 	

@@ -18,7 +18,7 @@ import com.pos.tdd.projectPayment.model.enums.PaymentSource;
 import com.pos.tdd.projectPayment.model.enums.PaymentStatus;
 
 @DataJpaTest
-public class PaymentRepositoryTest {
+class PaymentRepositoryTest {
 
 	@Autowired
 	private PaymentRepository repository;

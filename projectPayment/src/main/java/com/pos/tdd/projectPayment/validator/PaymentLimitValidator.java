@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 import com.pos.tdd.projectPayment.exceptions.PaymentLimitException;
 
 public final class PaymentLimitValidator {
+	
+    private PaymentLimitValidator() {}
 
-    private static final BigDecimal MAX_LIMIT = new BigDecimal("2000.00");
+	private static final BigDecimal MAX_LIMIT = new BigDecimal("2000.00");
 
     public static boolean isWithinLimit(BigDecimal amount) {
         try {

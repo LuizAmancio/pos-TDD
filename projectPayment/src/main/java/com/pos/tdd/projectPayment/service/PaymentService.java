@@ -1,7 +1,11 @@
 package com.pos.tdd.projectPayment.service;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,12 +20,8 @@ import com.pos.tdd.projectPayment.model.enums.PaymentStatus;
 import com.pos.tdd.projectPayment.repository.PaymentRepository;
 import com.pos.tdd.projectPayment.validator.PaymentLimitValidator;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
@@ -70,13 +70,13 @@ public class PaymentService {
     public List<PaymentResponse> getAllPayments() {
         return paymentRepository.findAll().stream()
                 .map(payment -> new ModelMapper().map(payment, PaymentResponse.class))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public List<PaymentResponse> getPaymentsByPayerId(UUID payerId) {
         return paymentRepository.findAllByPayerId(payerId).stream()
                 .map(payment -> new ModelMapper().map(payment, PaymentResponse.class))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     private void checkDailyLimit(PaymentRequest paymentRequest) {

@@ -25,7 +25,7 @@ import com.pos.tdd.projectPayment.model.enums.PaymentStatus;
 import com.pos.tdd.projectPayment.repository.PaymentRepository;
 
 @ExtendWith(MockitoExtension.class)
-public class PaymentServiceTest {
+class PaymentServiceTest {
 	
 	/*
 	 * Anotamos o que iremos simular
