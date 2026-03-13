@@ -8,9 +8,6 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.math.BigDecimal;
-import java.util.UUID;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,7 +16,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.pos.tdd.projectPayment.dataDriven.dataFactory.PaymentDataFactory;
-import com.pos.tdd.projectPayment.dto.PaymentRequest;
 import com.pos.tdd.projectPayment.exceptions.PaymentLimitException;
 import com.pos.tdd.projectPayment.model.enums.PaymentSource;
 import com.pos.tdd.projectPayment.model.enums.PaymentStatus;
